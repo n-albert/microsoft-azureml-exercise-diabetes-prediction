@@ -1,7 +1,8 @@
-from azureml.core import Experiment, ScriptRunConfig, Environment
+from azureml.core import Workspace, Experiment, ScriptRunConfig, Environment
 from azureml.core.conda_dependencies import CondaDependencies
 
 # Create a Python environment for the experiment
+ws = Workspace.from_config()
 sklearn_env = Environment("sklearn-env")
 
 # Ensure the required packages are installed
@@ -15,6 +16,6 @@ script_config = ScriptRunConfig(source_directory='training_folder',
                                 environment=sklearn_env) 
 
 # Submit the experiment
-experiment = Experiment(workspace="mlw-dp100-labs", name='training-experiment')
+experiment = Experiment(workspace=ws, name='training-experiment')
 run = experiment.submit(config=script_config)
 run.wait_for_completion()
