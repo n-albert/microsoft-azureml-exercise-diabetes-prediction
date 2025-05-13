@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression
 run = Run.get_context()
 
 # Prepare the dataset
-diabetes = pd.read_csv('data.csv')
+diabetes = pd.read_csv('diabetes.csv')
 
 # Nikita Albert's Note: Patient ID should not be a part of the training loop, 
 # since we do not want an ID number to influence a model's decisioning
