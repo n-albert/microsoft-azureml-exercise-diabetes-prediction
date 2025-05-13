@@ -17,15 +17,15 @@ diabetes = pd.read_csv('data.csv')
 # as to whether the given entry has diabetes or not.
 # I am including it because the exercise did not call for its removal.
 X, y = diabetes[['PatientID', 'Pregnancies', 'PlasmaGlucose', 'DiastolicBloodPressure', 'TricepsThickness', 'SerumInsulin', 'BMI', 'DiabetesPedigree', 'Age']].values, diabetes['Diabetic'].values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30)
+X_train_data, X_test_data, y_train_labels, y_test_labels = train_test_split(X, y, test_size=0.30)
 
 # Train a logistic regression model
 reg = 0.1
-model = LogisticRegression(C=1/reg, solver="liblinear").fit(X_train, y_train)
+model = LogisticRegression(C=1/reg, solver="liblinear").fit(X_train_data, y_train_labels)
 
 # calculate accuracy
-y_hat = model.predict(X_test)
-acc = np.average(y_hat == y_test)
+y_predicted_labels = model.predict(X_test_data)
+acc = np.average(y_predicted_labels == y_test_labels)
 run.log('Accuracy', np.float(acc))
 
 # Save the trained model
