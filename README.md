@@ -1,6 +1,8 @@
 # microsoft-azureml-exercise-diabetes-prediction
 This is an exercise from a Coursera course for the Microsoft Azure DP-100 certification. This is exercise to "Run a training script" as part of the "Build and Operate Machine Learning Solutions with Azure" module.
 
+I will take sometime later on to convert some of this code into a Jupyter notebook that will connect with the Compute Instance to execute the code, since some portion of the code would be easier to interpret in that format, in my opinion.
+
 # Create a compute instance with the Azure CLI
 In this exercise, you’ll create a compute instance with the following settings:
 
