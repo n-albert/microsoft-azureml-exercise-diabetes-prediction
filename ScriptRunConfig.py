@@ -6,7 +6,7 @@ ws = Workspace.from_config()
 sklearn_env = Environment("sklearn-env")
 
 # Ensure the required packages are installed
-packages = CondaDependencies.create(conda_packages=['scikit-learn', 'pandas', 'numpy', 'os', 'joblib', 'pip'],
+packages = CondaDependencies.create(conda_packages=['scikit-learn', 'pandas', 'numpy', 'joblib', 'pip'],
                                     pip_packages=['azureml-defaults'])
 sklearn_env.python.conda_dependencies = packages
 
