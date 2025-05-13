@@ -15,6 +15,6 @@ script_config = ScriptRunConfig(source_directory='training_folder',
                                 environment=sklearn_env) 
 
 # Submit the experiment
-experiment = Experiment(workspace=ws, name='training-experiment')
+experiment = Experiment(workspace="mlw-dp100-labs", name='training-experiment')
 run = experiment.submit(config=script_config)
 run.wait_for_completion()
