@@ -13,6 +13,7 @@ sklearn_env.python.conda_dependencies = packages
 # Create a script config
 script_config = ScriptRunConfig(source_directory='./training_folder',
                                 script='training_script.py',
+                                # arguments = ['--reg-rate', 0.1],
                                 environment=sklearn_env) 
 
 # Submit the experiment
