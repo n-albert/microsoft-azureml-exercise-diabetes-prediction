@@ -11,7 +11,7 @@ packages = CondaDependencies.create(conda_packages=['scikit-learn','pip'],
 sklearn_env.python.conda_dependencies = packages
 
 # Create a script config
-script_config = ScriptRunConfig(source_directory='training_folder',
+script_config = ScriptRunConfig(source_directory='./training_folder',
                                 script='training_script.py',
                                 environment=sklearn_env) 
 
