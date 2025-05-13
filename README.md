@@ -43,11 +43,11 @@ git clone https://github.com/n-albert/microsoft-azureml-exercise-diabetes-predic
 4) When the command has completed, in the Files pane, select ↻ to refresh the view and verify that a new Users/your-user-name/diabetes-prediction-exercise folder has been created.
 
 5) To run the ScriptRunConfig properly, you need to change the working directory to that of diabetes-prediction-exercise and then run the ScriptRunConfig file.
-To change the working directory:
-```
-cd diabetes-prediction-exercise
-```
-To run the ScriptRunConfig file:
-```
-python ScriptRunConfig.py
-```
+   To change the working directory:
+   ```
+   cd diabetes-prediction-exercise
+   ```
+   To run the ScriptRunConfig file:
+   ```
+   python ScriptRunConfig.py
+   ```
