@@ -35,14 +35,19 @@ Now that you’ve verified that the necessary compute has been created, you can 
  pip install azure-ai-ml
 ```
 
-3) Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
+3) Run the following commands to clone this Git repository to your workspace.
 ```
 git clone https://github.com/n-albert/microsoft-azureml-exercise-diabetes-prediction.git diabetes-prediction-exercise
 ```
 
-4) When the command has completed, in the Files pane, select ↻ to refresh the view and verify that a new Users/your-user-name/azure-ml-labs folder has been created.
+4) When the command has completed, in the Files pane, select ↻ to refresh the view and verify that a new Users/your-user-name/diabetes-prediction-exercise folder has been created.
 
-5) Run this command:
+5) To run the ScriptRunConfig properly, you need to change the working directory to that of diabetes-prediction-exercise and then run the ScriptRunConfig file.
+To change the working directory:
 ```
-python diabetes-prediction-exercise/ScriptRunConfig.py
+cd diabetes-prediction-exercise
+```
+To run the ScriptRunConfig file:
+```
+python ScriptRunConfig.py
 ```
